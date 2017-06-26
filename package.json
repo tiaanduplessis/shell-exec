@@ -1,0 +1,34 @@
+{
+  "name": "shell-exec",
+  "version": "1.0.0",
+  "description": "Execute a command through the system shell",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/tiaanduplessis/shell-exec",
+    "type": "git"
+  },
+  "homepage": "https://github.com/tiaanduplessis/shell-exec",
+  "bugs": "https://github.com/tiaanduplessis/shell-exec",
+  "main": "index.js",
+   
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "jest",
+    "lint": "standard index.js",
+    "lint:fix": "npm run lint -- --fix",
+    "start": "npm run test",
+    "pretest": "npm run format && npm run lint:fix",
+    "format": "prettier --print-width 100 --semi false --single-quote --write index.js",
+    "precommit": "npm test",
+    "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push --tags && npm publish"
+  },
+  "author": "tiaanduplessis <tiaanduplessis@hotmail.com>",
+  "devDependencies": {
+    "jest": "^20.0.1",
+    "standard": "^10.0.2", 
+    "husky": "^0.13.3",
+    "prettier": "~1.3.1"
+  }
+}
