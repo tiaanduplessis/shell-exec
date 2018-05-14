@@ -1,7 +1,7 @@
 {
   "name": "shell-exec",
   "version": "1.0.0",
-  "description": "Execute a command through the system shell",
+  "description": "A tiny cross-platform promise based wrapper around child_process.spawn.",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/tiaanduplessis/shell-exec",
@@ -10,25 +10,20 @@
   "homepage": "https://github.com/tiaanduplessis/shell-exec",
   "bugs": "https://github.com/tiaanduplessis/shell-exec",
   "main": "index.js",
-   
   "files": [
     "index.js"
   ],
   "scripts": {
     "test": "jest",
-    "lint": "standard index.js",
-    "lint:fix": "npm run lint -- --fix",
-    "start": "npm run test",
-    "pretest": "npm run format && npm run lint:fix",
-    "format": "prettier --print-width 100 --semi false --single-quote --write index.js",
-    "precommit": "npm test",
-    "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push --tags && npm publish"
+    "lint": "standard --fix index.js",
+    "start": "yarn test",
+    "pretest": "yarn lint",
+    "precommit": "yarn test"
   },
-  "author": "tiaanduplessis <tiaanduplessis@hotmail.com>",
+  "author": "Tiaan du Plessis",
   "devDependencies": {
-    "jest": "^21.2.1",
-    "standard": "^10.0.2", 
-    "husky": "^0.14.3",
-    "prettier": "~1.7.4"
+    "jest": "^22.4.3",
+    "standard": "^11.0.1", 
+    "husky": "^0.14.3"
   }
 }

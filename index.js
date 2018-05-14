@@ -1,5 +1,8 @@
+'use strict'
+
 const childProcess = require('child_process')
-function exec (cmd = '', opts = {}) {
+
+function shellExec (cmd = '', opts = {}) {
   if (Array.isArray(cmd)) {
     cmd = cmd.join(';')
   }
@@ -41,4 +44,4 @@ function exec (cmd = '', opts = {}) {
   })
 }
 
-module.exports = exec
+module.exports = shellExec
