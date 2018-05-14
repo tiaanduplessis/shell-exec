@@ -56,6 +56,8 @@
 
 ## About
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/shell-exec.svg)](https://greenkeeper.io/)
+
 A tiny cross-platform promise based wrapper around [`child_process.spawn`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options).
 
 ## Install
