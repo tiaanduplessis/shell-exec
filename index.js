@@ -7,7 +7,7 @@ function shellExec (cmd = '', opts = {}) {
     cmd = cmd.join(';')
   }
 
-  opts = Object.assign({ stdio: 'inherit', cwd: process.cwd() }, opts)
+  opts = Object.assign({ stdio: 'pipe', cwd: process.cwd() }, opts)
 
   let child
   const shell = process.platform === 'win32' ? { cmd: 'cmd', arg: '/C' } : { cmd: 'sh', arg: '-c' }
