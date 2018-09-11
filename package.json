@@ -1,6 +1,6 @@
 {
   "name": "shell-exec",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tiny cross-platform promise based wrapper around child_process.spawn.",
   "license": "MIT",
   "repository": {
@@ -22,8 +22,8 @@
   },
   "author": "Tiaan du Plessis",
   "devDependencies": {
+    "husky": "^0.14.3",
     "jest": "^22.4.3",
-    "standard": "^12.0.0",
-    "husky": "^0.14.3"
+    "standard": "^12.0.0"
   }
 }
