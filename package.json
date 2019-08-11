@@ -22,7 +22,7 @@
   },
   "author": "Tiaan du Plessis",
   "devDependencies": {
-    "husky": "2.7.0",
+    "husky": "3.0.3",
     "jest": "22.4.3",
     "standard": "12.0.1"
   }
