@@ -28,6 +28,14 @@ $ yarn add shell-exec
 
 ## Usage
 
+typescript:
+```ts
+import shellExec from 'shell-exec'
+
+shellExec('echo Hi!').then(console.log).catch(console.log)
+```
+
+node:
 ```js
 const shellExec = require('shell-exec')
 
