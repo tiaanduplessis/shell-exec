@@ -1,4 +1,4 @@
-import shellExec from "shell-exec";
+import shellExec from "./src";
 
 shellExec("echo Hi!").then(console.log).catch(console.log);
 // Hi!

@@ -1,4 +1,5 @@
-const shellExec = require("../dist").default;
+import {test, expect} from 'vitest'
+import shellExec from "../src"
 
 test("should export function", () => {
   expect(shellExec).toBeDefined();

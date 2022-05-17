@@ -1,50 +1,51 @@
 
-# shell-exec
+# 🐚 shell-exec
 [![package version](https://img.shields.io/npm/v/shell-exec.svg?style=flat-square)](https://npmjs.org/package/shell-exec)
 [![package downloads](https://img.shields.io/npm/dm/shell-exec.svg?style=flat-square)](https://npmjs.org/package/shell-exec)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 [![package license](https://img.shields.io/npm/l/shell-exec.svg?style=flat-square)](https://npmjs.org/package/shell-exec)
-[![make a pull request](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/shell-exec.svg)](https://greenkeeper.io/)
+[![make a pull request](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-> A tiny cross-platform promise based wrapper around child_process.spawn.
+A tiny cross-platform promise based wrapper around child_process.spawn.
 
 ## Table of Contents
 
-- [Install](#install)
-- [Usage](#usage)
-- [API](#api)
-- [Contribute](#contribute)
-- [License](#License)
+- [🐚 shell-exec](#-shell-exec)
+  - [Table of Contents](#table-of-contents)
+  - [⚙️ Install](#️-install)
+  - [📖 Usage](#-usage)
+  - [📚 API](#-api)
+    - [`shellExec(command, options)`](#shellexeccommand-options)
+  - [💬 Contributing](#-contributing)
+  - [🪪 License](#-license)
 
-## Install
+## ⚙️ Install
 
-This project uses [node](https://nodejs.org) and [npm](https://www.npmjs.com). 
+Install the package locally within you project folder with your package manager:
 
+With `npm`:
 ```sh
-$ npm install shell-exec
-$ # OR
-$ yarn add shell-exec
+npm install feature-flip
 ```
 
-## Usage
+With `yarn`:
+```sh
+yarn add feature-flip
+```
 
-typescript:
+With `pnpm`:
+```sh
+pnpm add feature-flip
+```
+
+## 📖 Usage
+
 ```ts
 import shellExec from 'shell-exec'
-
 shellExec('echo Hi!').then(console.log).catch(console.log)
 ```
 
-node:
-```js
-const shellExec = require('shell-exec')
-
-shellExec('echo Hi!').then(console.log).catch(console.log)
-// Hi!
-// { stdout: '', stderr: '', cmd: 'echo Hi!', code: 0 }
-```
-
-## API
+## 📚 API
 
 ### `shellExec(command, options)`
 
@@ -55,14 +56,13 @@ shellExec('echo Hi!').then(console.log).catch(console.log)
 
 The function then returns a `Promise`.
 
-## Contribute
+See the hosted docs [here]()
 
-1. Fork it and create your feature branch: git checkout -b my-new-feature
-2. Commit your changes: git commit -am 'Add some feature'
-3.Push to the branch: git push origin my-new-feature 
-4. Submit a pull request
+## 💬 Contributing
 
-## License
+Got an idea for a new feature? Found a bug? Contributions are welcome! Please [open up an issue](https://github.com/tiaanduplessis/feature-flip/issues) or [make a pull request](https://makeapullrequest.com/).
 
-MIT
-    
+## 🪪 License
+
+[MIT © Tiaan du Plessis](./LICENSE)
+
