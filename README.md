@@ -56,7 +56,7 @@ shellExec('echo Hi!').then(console.log).catch(console.log)
 
 The function then returns a `Promise`.
 
-See the hosted docs [here]()
+See the hosted docs [here](https://paka.dev/npm/shell-exec@1.1.0/api).
 
 ## 💬 Contributing
 
