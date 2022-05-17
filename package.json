@@ -1,6 +1,6 @@
 {
   "name": "shell-exec",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A tiny cross-platform promise based wrapper around child_process.spawn.",
   "license": "MIT",
   "types": "dist/index.d.ts",
