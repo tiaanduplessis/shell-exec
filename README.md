@@ -25,17 +25,17 @@ Install the package locally within you project folder with your package manager:
 
 With `npm`:
 ```sh
-npm install feature-flip
+npm install shell-exec
 ```
 
 With `yarn`:
 ```sh
-yarn add feature-flip
+yarn add shell-exec
 ```
 
 With `pnpm`:
 ```sh
-pnpm add feature-flip
+pnpm add shell-exec
 ```
 
 ## 📖 Usage
@@ -60,7 +60,7 @@ See the hosted docs [here](https://paka.dev/npm/shell-exec@1.1.0/api).
 
 ## 💬 Contributing
 
-Got an idea for a new feature? Found a bug? Contributions are welcome! Please [open up an issue](https://github.com/tiaanduplessis/feature-flip/issues) or [make a pull request](https://makeapullrequest.com/).
+Got an idea for a new feature? Found a bug? Contributions are welcome! Please [open up an issue](https://github.com/tiaanduplessis/shell-exec/issues) or [make a pull request](https://makeapullrequest.com/).
 
 ## 🪪 License
 
