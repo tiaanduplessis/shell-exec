@@ -23,11 +23,12 @@
   "scripts": {
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "build": "rm -rf dist && tsup src/index.ts --format cjs,esm --dts --target node12",
+    "build": "rm -rf dist && tsup src/index.ts --format cjs,esm --dts --target node12 && node scripts/copy-types.js",
     "prepublishOnly": "pnpm run build",
     "types:check": "tsc --noEmit",
     "format": "pretty-quick --ignore-path .gitignore",
-    "start": "tsx example.ts"
+    "start": "tsx example.ts",
+    "test:package": "npm run build && node scripts/test-package.js"
   },
   "keywords": [
     "shell-exec",
@@ -43,7 +44,30 @@
     "pretty-quick": "^3.1.3",
     "tsup": "^5.12.8",
     "tsx": "^3.1.0",
-    "typescript": "^4.6.4",
+    "typescript": "^4.7.4",
     "vitest": "^0.12.6"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "default": "./dist/index.js"
+    },
+    "./dist": "./dist/index.js",
+    "./dist/index": "./dist/index.js",
+    "./dist/index.js": "./dist/index.js",
+    "./dist/index.mjs": "./dist/index.mjs",
+    "./dist/index.d.ts": "./dist/index.d.ts",
+    "./dist/index.d.mts": "./dist/index.d.mts",
+    "./package.json": "./package.json",
+    "./README.md": "./README.md",
+    "./LICENSE": "./LICENSE",
+    "./package": "./package.json"
   }
 }

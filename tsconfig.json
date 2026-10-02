@@ -9,5 +9,6 @@
     "strict": true,
     "noPropertyAccessFromIndexSignature": true,
     "skipLibCheck": true
-  }
+  },
+  "exclude": ["node_modules", "dist", "test/fixtures"]
 }

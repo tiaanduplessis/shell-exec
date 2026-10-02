@@ -45,6 +45,15 @@ import shellExec from 'shell-exec'
 shellExec('echo Hi!').then(console.log).catch(console.log)
 ```
 
+For CommonJS, use the existing `default` export:
+
+```js
+const shellExec = require('shell-exec').default
+shellExec('echo Hi!').then(console.log).catch(console.log)
+```
+
+Node loads the ESM build for `import` and the CommonJS build for `require`. Native ESM requires a Node version with unflagged ESM and conditional exports support (Node 12.17 or later).
+
 ## 📚 API
 
 ### `shellExec(command, options)`
@@ -61,6 +70,17 @@ See the hosted docs [here](https://paka.dev/npm/shell-exec@1.1.0/api).
 ## 💬 Contributing
 
 Got an idea for a new feature? Found a bug? Contributions are welcome! Please [open up an issue](https://github.com/tiaanduplessis/shell-exec/issues) or [make a pull request](https://makeapullrequest.com/).
+
+To check the source and the actual npm package locally, use Node 14.16 or later for the development tools:
+
+```sh
+pnpm install --frozen-lockfile
+pnpm test --run
+pnpm run types:check
+npm run test:package
+```
+
+`test:package` builds and packs the package, installs that local tarball with lifecycle scripts disabled, and checks native CommonJS/ESM and TypeScript consumers. It does not publish anything.
 
 ## 🪪 License
 
